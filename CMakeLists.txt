@@ -4,6 +4,8 @@ project(except)
 set(CMAKE_CXX_STANDARD 26)
 
 add_library(detri_except STATIC)
+add_library(detri::except ALIAS detri_except)
+
 target_sources(detri_except PUBLIC FILE_SET HEADERS
     BASE_DIRS src
     FILES src/detri/except.hpp
